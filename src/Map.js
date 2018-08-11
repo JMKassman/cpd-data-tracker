@@ -19,6 +19,7 @@ class Map extends Component {
 
 const IncidentMap = withScriptjs(withGoogleMap((props) => {
     const markers = props.data.map(incident => <IncidentMarker
+                                                    key={incident.event_number}
                                                     location={ {lat: parseFloat(incident.latitude_x), lng: parseFloat(incident.longitude_x)} }
                                                     title={incident.incident_type_desc}
                                                 /> );
@@ -28,7 +29,12 @@ const IncidentMap = withScriptjs(withGoogleMap((props) => {
             defaultZoom={12}
             center={ {lat:39.1031, lng:-84.5120} }
         >
-            {markers}
+            <MarkerClusterer
+                gridSize={50}
+                zoomOnClick={true}
+            >
+                {markers}
+            </MarkerClusterer>
         </GoogleMap>
     );
 }));
