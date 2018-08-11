@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import Map from './Map.js';
+import flag from './Flag_of_Cincinnati,_Ohio.svg';
 
 class App extends Component {
     constructor(props) {
@@ -36,7 +37,11 @@ class App extends Component {
 
     render() {
         return (
-            <div id="map">
+            <div className="App">
+                <header className="App-header">
+                    <img src={flag} className="App-logo" alt="Flag of Cincinnati"/>
+                    <h1 className="App-title">CPD Data Tracker</h1>
+                </header>
                 <Map data={this.state.data}/>
             </div>
         );

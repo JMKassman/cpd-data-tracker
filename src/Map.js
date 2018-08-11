@@ -10,7 +10,7 @@ class Map extends Component {
                 data={this.props.data}
                 googleMapURL={`https://maps.googleapis.com/maps/api/js?key=AIzaSyC5w20ZOrvAVFgJXqohNs5Spxdrb9y4ivw`}
                 loadingElement={<div style={{ height: `100%` }} />}
-                containerElement={<div style={{ height: `100vh`, width: `100vw` }} />}
+                containerElement={<div id="map" />}
                 mapElement={<div style={{ height: `100%` }} />}
             />
         );
