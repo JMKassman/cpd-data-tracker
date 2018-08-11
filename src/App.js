@@ -13,8 +13,7 @@ class App extends Component {
 
     componentDidMount() {
         this.getData()
-            .catch(err => console.log(err))
-            .then(() => console.log(this.state));
+            .catch(err => console.log(err));
     }
 
     getData = async () => {
@@ -37,12 +36,13 @@ class App extends Component {
 
     render() {
         return (
-            <div className="App">
+            <div className="App" id="grid-container">
                 <header className="App-header">
                     <img src={flag} className="App-logo" alt="Flag of Cincinnati"/>
                     <h1 className="App-title">CPD Data Tracker</h1>
                 </header>
-                <Map data={this.state.data}/>
+                    <Map id="grid-map" data={this.state.data}/>
+                    <p id="grid-sidebar"> Test</p>
             </div>
         );
     }

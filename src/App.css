@@ -1,12 +1,12 @@
 #map {
-    height: 600px;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     margin: auto;
 }
 
 .App-header {
     background-color: #C28E0E;
-    height: 160px;
+    grid-area: 1 / 1 / 2 / -1;
     padding: 20px;
     color: black;
 }
@@ -21,4 +21,20 @@
 
 .App-logo {
     height: 120px;
+}
+
+#grid-container {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 200px auto;
+}
+
+#grid-map {
+    grid-area: 2 / 1 / -1 / 2;
+}
+
+#grid-sidebar {
+    grid-area: 2 / 2 / -1 / -1;
 }
