@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './App.css';
 import Map from './Map.js';
 import flag from './Flag_of_Cincinnati,_Ohio.svg';
+import Report from './report.js';
 
 class App extends Component {
     constructor(props) {
@@ -42,7 +43,9 @@ class App extends Component {
                     <h1 className="App-title">CPD Data Tracker</h1>
                 </header>
                     <Map id="grid-map" data={this.state.data}/>
-                    <p id="grid-sidebar"> Test</p>
+                    <div id="grid-sidebar">
+                        <Report data={this.state.data}/>
+                    </div>
             </div>
         );
     }

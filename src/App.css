@@ -20,15 +20,17 @@
 }
 
 .App-logo {
-    height: 120px;
+    height: 60px;
 }
 
 #grid-container {
     display: grid;
-    width: 100vw;
+    width: 95vw;
+    margin: auto;
     height: 100vh;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 200px auto;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 140px auto;
+    grid-gap: 5px;
 }
 
 #grid-map {
